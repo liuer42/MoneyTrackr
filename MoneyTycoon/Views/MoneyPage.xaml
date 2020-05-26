@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:MoneyTycoon.ViewModels;assembly=MoneyTycoon"
+             mc:Ignorable="d"
+             x:Class="MoneyTycoon.Views.MoneyPage"
+             Title="{Binding Title}"
+             x:Name="MoneyViewPage">
+
+    <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout>
+                <Label Text="Balance"
+                       FontSize="Medium"
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="Center" />
+                <Label Text="0"
+                       x:Name="total"
+                       FontSize="60"
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="Center" />    
+            </StackLayout>
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Button Margin="0,0,0,0" Text="Deposit"
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        HorizontalOptions="Center"
+                        HeightRequest="100" 
+                        WidthRequest="200"
+                        Clicked="AddTx_Clicked"
+                        TextColor="Green" />
+            <Button Margin="0,0,0,0" Text="Expense"
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        HorizontalOptions="Center"
+                        HeightRequest="100" 
+                        WidthRequest="200"
+                        Clicked="NegTx_Clicked"
+                        TextColor="Red" />
+        </Grid>
+    </StackLayout>
+    
+</ContentPage>
