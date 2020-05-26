@@ -12,6 +12,8 @@
         <Label Text="{Binding Description}" FontSize="Large"/>
         <Label Text="Amount:" FontSize="Small" />
         <Label Text="{Binding Value}" FontSize="Large"/>
+        <Label Text="Date:" FontSize="Small" />
+        <Label Text="{Binding Date}" FontSize="Large"/>
     </StackLayout>
     
 </ContentPage>
